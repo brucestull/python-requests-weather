@@ -10,9 +10,14 @@ API_KEY = os.getenv("OPEN_WEATHER_API_KEY")
 CITY = os.getenv("CITY", "Columbus,US")  # Use "City,CountryCode"
 URL = f"https://api.openweathermap.org/data/2.5/forecast?q={CITY}&appid={API_KEY}&units=metric"
 
+# Verify URL
+print("URL:", URL)
+
 # Send request
 response = requests.get(URL)
+# print("Response:", response)
 data = response.json()
+# print("Data:", data)
 
 if response.status_code == 200:
     forecasts = data["list"]
