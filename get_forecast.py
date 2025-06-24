@@ -1,3 +1,4 @@
+# get_forecast.py
 import os
 
 import requests
@@ -8,7 +9,7 @@ load_dotenv()
 # Replace with your actual API key
 API_KEY = os.getenv("OPEN_WEATHER_API_KEY")
 CITY = os.getenv("CITY", "Columbus,US")  # Use "City,CountryCode"
-URL = f"https://api.openweathermap.org/data/2.5/forecast?q={CITY}&appid={API_KEY}&units=metric"
+URL = f"https://api.openweathermap.org/data/2.5/forecast?q={CITY}&appid={API_KEY}&units=metric"  # noqa: E501
 
 # Verify URL
 print("URL:", URL)
