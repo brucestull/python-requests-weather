@@ -1,5 +1,6 @@
 forecast*.json
-
+forecast_summary.html
+forecast_summary.md
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
